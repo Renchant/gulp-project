@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <title>中秋祝福</title>
+    <script>
+        var docEl = document.documentElement;
+        var scale = docEl.clientWidth / 750;
+        docEl.style.fontSize = 100 * scale + 'px';
+    </script>
+    <link rel="stylesheet" href="{{CSS_ROOT}}moon2017/__dev/css/index.css">
+</head>
+
+<body>
+    <div class="preload">
+        <img class="preload-bg" src="{{CSS_ROOT}}moon2017/__dev/images/bg.png">
+        <div class="progress">
+            <div class="progress-bar-tran">
+                <div class="progress-bar active">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app">
+        <div class="music" id="music">
+            <audio id="bgMusic" preload="auto" autoplay loop></audio>
+            <audio id="pageMusic" preload="auto" autoplay></audio>
+        </div>
+        <div class="scroll">
+            <div class="contain page1">
+                <div class="page1__container">
+                    <div class="page_start" style="left: 1.05rem; top: 2.3rem" data-flash="page-start-flash" data-delay="600"></div>
+                    <div class="page_start" style="left: 6.66rem; top: 2.3rem" data-flash="page-start-flash" data-delay="800"></div>
+                    <div class="page_start" style="left: 1.86rem; top: 3.22rem" data-flash="page-start-flash" data-delay="0"></div>
+                    <div class="page_start" style="left: .5rem; top: 3.84rem" data-flash="page-start-flash" data-delay="200"></div>
+                    <div class="page_start" style="left: 5.4rem; top: 4.32rem" data-flash="page-start-flash" data-delay="400"></div>
+                    <div class="page_start" style="left: 7.8rem; top: 4.13rem" data-flash="page-start-flash" data-delay="1000"></div>
+                    <div class="page_start" style="left: -.05rem; top: 5.45rem" data-flash="page-start-flash" data-delay="500"></div>
+                    <div class="page_start" style="right: -.1rem; top: 5.45rem" data-flash="page-start-flash" data-delay="0"></div>
+                    <div class="page_start" style="left: 1.58rem; top: 5.45rem; opacity: .5"></div>
+                    <div class="page_start" style="left: .68rem; top: 7.33rem; opacity: .3"></div>
+                    <div class="page_start" style="left: 5.85rem; top: 6.88rem; opacity: .3"></div>
+                    <div class="page_start" style="left: 1.86rem; top: 8.12rem; opacity: .2"></div>
+                    <div class="page_start" style="left: 4.68rem; top: 8.88rem; opacity: .3"></div>
+                    <div class="page_start" style="right: -.05rem; top: 8.4rem; opacity: .3"></div>
+                    <p id="page1-text" class="page__text">
+                        老铁，中秋月圆夜，<br/>
+                        你到家了吗？<br/>
+                        在你们其乐融融的团聚时，<br/>
+                        我们正在搞一件大事情...&nbsp;...
+                    </p>
+                </div>
+            </div>
+            <div class="contain page page2">
+                <div class="page__container">
+                    <div id="page2-window" class="page__window">
+                        <div class="window__content"></div>
+                    </div>
+                    <div class="office-card">客户经理</div>
+                    <p id="page2-text" class="page__text">
+                        每个客户爸爸<br/>
+                        从未在我的微信置顶里消失
+                    </p>
+                </div>
+            </div>
+            <div class="contain page page3">
+                <div class="page__container">
+                    <div id="page3-window" class="page__window">
+                        <div class="window__content"></div>
+                    </div>
+                    <div class="office-card">创意策划</div>
+                    <p id="page3-text" class="page__text">
+                        就算比了几十稿<br/>
+                        我也愿意改为第一稿
+                    </p>
+                </div>
+            </div>
+
+            <div class="contain page page4">
+                <div class="page__container">
+                    <div id="page4-window" class="page__window">
+                        <div class="window__content"></div>
+                    </div>
+                    <div class="office-card">设计</div>
+                    <p id="page4-text" class="page__text">
+                        我画了无数个圆<br/>
+                        只想画出<br/>
+                        客户心中的那个月亮
+                    </p>
+                </div>
+            </div>
+            <div class="contain page page5">
+                <div class="page__container">
+                    <div id="page5-window" class="page__window">
+                        <div class="window__content">
+                            <div
+                                class="page5-talk__left"></div>
+                            <div
+                                class="page5-talk__right"></div>
+                        </div>
+                    </div>
+                    <div class="office-card">媒介</div>
+                    <p id="page5-text" class="page__text">
+                        只要客户爸爸开心<br/>
+                        再难谈的KOL<br/>
+                        我们都能为你拿下
+                    </p>
+                </div>
+            </div>
+            <div class="contain page page6">
+                <div class="page__container">
+                    <div id="page6-window" class="page__window">
+                        <div class="window__content"></div>
+                    </div>
+                    <div class="office-card">技术</div>
+                    <p id="page6-text" class="page__text">
+                        无论什么样的BUG<br/>
+                        都无法阻止我们改变世界
+                    </p>
+                </div>
+            </div>
+
+            <div class="contain page page7">
+                <div class="page__container">
+                    <div id="page7-window" class="page__window">
+                        <div class="window__content">
+                            <div
+                                class="page7-pao animation_show nor_delay"></div>
+                        </div>
+                    </div>
+                    <div class="office-card">产品经理</div>
+                    <p id="page7-text" class="page__text">
+                        我们这里每一个产品经理<br/>
+                        都是追求完美的处女座！
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contain">
+                <div class="contain-page">
+                    <div class="page8_desc">
+                        <div id="page8-window"></div>
+                        <div id="page8_top_moon" class="page8_top_moon"></div>
+                        <div class="page_start" style="left:1.71rem;top: 3.14rem" data-flash="page-start-flash" data-delay="1000"></div>
+                        <div class="page_start" style="left:.39rem;top: 3.84rem" data-flash="page-start-flash" data-delay="200"></div>
+                        <div class="page_start" style="left:192rem;top: 5.18rem" data-flash="page-start-flash" data-delay="600"></div>
+                        <div class="page_start" style="left:1.03rem;top: 6.38rem" data-flash="page-start-flash" data-delay="0"></div>
+                        <div class="page_start" style="left:5.31rem;top: 3.9rem" data-flash="page-start-flash" data-delay="400"></div>
+                        <div class="page_start" style="left:5.33rem;top: 6.4rem" data-flash="page-start-flash" data-delay="900"></div>
+                        <div class="page_start" style="left:6.51rem;top: 5.78rem" data-flash="page-start-flash" data-delay="300"></div>
+                        <div class="page_start" style="left:7.09rem;top: 4.46rem" data-flash="page-start-flash" data-delay="500"></div>
+                        <div class="page8_top_text">
+                            <p id="page8-text" class="page__text">
+                                有了友友传媒每个老伙计的付出 ，<br/> 我们终于搞成了一件大事情 . .<br/>优选云自媒体投放平台正式上线 ！
+                            </p>
+                        </div>
+                    </div>
+                    <div class="page8_img">
+                        <div class="page8_img-left_pao animation_left_translate_b"></div>
+                        <div class="page8_img-right_pao animation_left_translate_br"></div>
+                        <div 
+                            class="page8_img-bottom_moon"></div>
+                        <div 
+                            class="page8_img-bottom_moon-logo animation_show more_delay"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain">
+                <div class="contain-page">
+                    <div class="page9__top">
+                        <div class="page9_top_arrow">
+                            <div class="page9_top_arrow-img"></div>
+                        </div>
+                        <div class="page9_top_text">
+                            <div id="settime_delay" class="settime_delay"></div>
+                            <p id="page9-text" class="page__text">
+                                我们愿为您在背后创建 ，<br/> 更大的价值 ，<br/>友友期待与你并肩成为<br/>业界大佬 ！<br/>让您每个中秋佳节都能<br/>安心回家过节 ！
+                            </p>
+                        </div>
+                        <div class="contain-page__top-img">
+                            <div class="contain-page__top-img__moon"></div>
+                            <div class="page_start" style="left:.37rem;top: .68rem "></div>
+                                        <div
+                                            class="page_start "
+                                                style="left:1.63rem;top: 1.94rem"></div>
+                            <div class="page_start" style="left:.43rem;top: 4.88rem "></div>
+                                        <div
+                                            class="page_start "
+                                                style="left:5.01rem;top: .56rem "></div>
+                            <div class="page_start" style="left:6.95rem;top: 2.44rem"></div>
+                                        <div
+                                            class="page_start "
+                                                style="left:5.89rem;top: 3.92rem"></div>
+                        </div>
+                    </div>
+                    <div class="page9__bottom">
+                        <div class="page9__bottom__bottom-door">
+                            <div
+                                class="page9__bottom__bottom-door__left animation_left_translate more_delay"></div>
+                                <div
+                                class="page9__bottom__bottom-door__right animation_right_translate more_delay"></div>
+                            <div
+                                class="page9__bottom__bottom-door__icon animation_show more_l_delay">
+                                <img src="http://fs.youxuanyun.com/youxuanyun-website/dist/images/trial/mp_qrcode.31e4589c90.jpg" alt="优选云">
+                            </div>
+                        </div>
+                        <div class="page9__bottom__left-light"></div>
+                        <div class="page9__bottom__right-light"></div>
+                        <div class="page9__bottom-text animation_hide more_delay">
+                            <div class="page9__bottom-text__desc">
+                                开启梦想大门
+                            </div>
+                            <div class="page9__bottom-text__img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='http://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+    <script>
+        var domain = location.protocol + "//" + location.host;
+        var signature = {
+            debug: false,
+            appId: '{{appid}}',
+            timestamp: '{{timestamp}}',
+            nonceStr: '{{noncestr}}',
+            signature: '{{signature}}',
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage']
+        };
+        wx.config(signature);
+        wx.ready(function () {
+            wx.onMenuShareTimeline({
+                title: '恰逢中秋月圆夜，我们正在搞一件大事情...',
+                link: domain + '/h/moon2017/',
+                imgUrl: '{{JS_ROOT}}moon2017/__dev/images/share.jpg'
+            });
+            wx.onMenuShareAppMessage({
+                title: '恰逢中秋月圆夜，我们正在搞一件大事情...',
+                desc: '祝您中秋快乐',
+                link: domain + '/h/moon2017/',
+                imgUrl: '{{JS_ROOT}}moon2017/__dev/images/share.jpg'
+            });
+        });
+    </script>
+
+    <script src="{{IMAGE_ROOT}}moon2017/__dev/index.js"></script>
+
+    <!-- vconsole -->
+    <!-- <script src='{{JS_ROOT}}moon2017/__dev/libs/vconsole.min.js'></script> -->
+</body>
+
+</html>

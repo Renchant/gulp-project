@@ -1,0 +1,12 @@
+@import './base';
+
+.page3 {
+    .page__container {
+        padding-top: .4rem;
+    }
+
+    .window__content {
+        @include bg('page3-plan.png', 4.68rem, 2.07rem);
+        background-position: center bottom;
+    }
+}

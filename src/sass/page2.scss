@@ -1,0 +1,12 @@
+@import './base';
+
+.page2 {
+    .page__container {
+        padding-top: .4rem;
+    }
+
+    .window__content {
+        @include bg('page2-account-manager.png', 3rem, 1.82rem);
+        background-position: center bottom;
+    }
+}

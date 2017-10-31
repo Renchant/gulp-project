@@ -1,0 +1,39 @@
+@import './base';
+
+.page5 {
+    .page__container {
+        padding-top: .4rem;
+    }
+
+    .window__content {
+        @include bg('page5-media.png', 5.16rem, 2.26rem);
+        background-position: center bottom;
+    }
+    .page5-talk__left{
+        position: absolute;
+        left: 1.25rem;
+        top: .58rem;
+        width: 1.47rem;
+        height: .57rem;
+        @include bg('page5_left_talk.png');
+        opacity: 0;
+    }
+    .page5-talk__right{
+        position: absolute;
+        left: 1.59rem;
+        top: 1.35rem;
+        width: 1.47rem;
+        height: .57rem;
+        @include bg('page5_right_talk.png');
+    }
+
+    &.swiper-slide-active {
+        .page5-talk__left {
+            animation: fade-talk .5s linear 1s both;
+        }
+
+        .page5-talk__right {
+            animation: fade-talk .5s linear 1.5s both;
+        }
+    }
+}

@@ -1,0 +1,260 @@
+@import './base.scss';
+$__white: white;
+$__blue: rgb(15,21,40);
+
+.contain-page{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+.swiper-slide-active{
+    .contain-page{
+        display: block;
+    }
+}
+
+
+.page7 {
+    .page__container {
+        padding-top: .4rem;
+    }
+
+    .window__content {
+        @include bg('product_manager.png', 4.68rem, 2.07rem);
+        background-position: center bottom;
+    }
+}
+
+.page8_desc{
+    position: relative;;
+    padding-top: 1.1rem;
+}
+.page8_top_moon{
+    @include bg('page8_three_moon.png');
+    width: .35rem;
+    height: 1.56rem;
+    margin: 0 auto .5rem;
+}
+.page8_top_text{
+    position: relative;
+    z-index: 2;
+    font-size: .28rem;
+    @include flex_center(center, flex-start);
+    div{
+        width: .36rem;
+        padding: 0 .3rem;
+        color: $__white;
+    }
+}
+.page8_img{
+    height: 5.5rem;
+    width: 7.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.page8_img-left_pao{
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include bg('page8_flower.png');
+    width: 2.2rem;
+    height: 3.76rem;
+    transform: translateX(-100%);
+}
+.page8_img-right_pao{
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include bg('page8_flower.png');
+    width: 2.2rem;
+    height: 3.76rem;
+    transform: rotateY(180deg) translateX(-100%);
+}
+//需要动画部分
+.page8_img-bottom_moon{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3.75rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    transform: translateY(4.4rem);
+    background-color: rgb(241,241,129);
+}
+.page8_img-bottom_moon-logo{
+    position: absolute;
+    @include bg('page8_logo.png');
+    width: 1.61rem;
+    height: 1.66rem;
+    bottom: .7rem;
+    left: 50%;
+    margin-left: -.805rem;
+}
+.page9__top{
+    position: relative;
+    margin-bottom: .2rem;
+}
+.page9_top_text{
+    position: relative;
+    z-index: 2;
+    font-size: .28rem;
+    @include flex_center(center, flex-start);
+    div{
+        width: .36rem;
+        padding: 0 .3rem;
+        color: $__white;
+    }
+}
+.page9_top_arrow{
+    height:.95rem;
+    @include flex_center();
+}
+.page9_top_arrow-img{
+    width: .55rem;
+    height: .47rem;
+    @include bg('page9_top_arrow.png');
+}
+.contain-page__top-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.contain-page__top-img__moon{
+    position: absolute;
+    right: .2rem;
+    top: .2rem;
+    @include bg('page9_moon.png');
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.page9__bottom{
+    position: absolute;;
+    bottom: 0;
+    width: 7.5rem;
+    left: 0;
+    height: 5.84rem;
+    
+
+}
+//门结构
+.page9__bottom__bottom-door{
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    width: 4.52rem;
+    height: 5.84rem;
+    margin-left: -2.26rem;
+    background-color: $__white;
+    bottom: 0;
+    @include flex_center();
+}
+
+
+
+.page9__bottom__right-light{
+    @include bg('page9_light.png');
+    position: absolute;
+    left: .3rem;
+    top: .9rem;
+    width: .89rem;
+    height: 3.04rem;
+}
+.page9__bottom__left-light{
+    position: absolute;
+    width: .89rem;
+    height: 3.04rem;
+    @include bg('page9_light.png');
+    right: .3rem;
+    top: .9rem;
+}
+.page9__bottom__hand{
+    height: .15rem;
+    width: 1rem;
+    background-color: $__blue;
+    position: absolute;
+    top: 4.43rem;
+    left: 2.85rem;
+    transform-origin: 0 0;
+}
+
+//开启梦想大门
+.page9__bottom-text{
+    position: absolute;
+    height: 3.34rem;
+    width: .5rem;
+    top: .3rem;
+    left: 1.8rem;
+
+}
+.page9__bottom__bottom-door__left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.16rem;
+    height: 5.84rem;
+    @include bg('page9_left.png');
+}
+.page9__bottom__bottom-door__right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2.16rem;
+    height: 5.84rem;
+    @include bg('page9_right.png');
+    
+}
+.page9__bottom-text__desc{
+    font-size: .38rem;
+    color: $__blue;
+    text-align: right;
+}
+.page9__bottom-text__img{
+    transform: rotateY(180deg) translateX(-.2rem) rotate(10deg);
+    @include bg('page9_arrow.png');
+    width: .75rem;
+    height: .99rem;
+    margin: .1rem auto 0;
+}
+.page_start{
+    @include bg('start.png');
+    position: absolute;
+    height: .23rem;
+    width: .23rem;
+}
+.settime_delay{
+    opacity: 1;
+    transition: opacity 1s;
+    padding: 0;
+    &.active{
+        opacity: 0;
+    }
+}
+
+.page9__bottom__bottom-door__icon{
+    width: 2.24rem;
+    height: 2.24rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.page7-pao{
+    position: absolute;
+    width: .85rem;
+    height: .81rem;
+    left: 2.48rem;
+    top: .82rem;
+    @include bg('page7_pao.png');
+
+}
+.swiper-slide-active{
+    .page7-pao{
+        animation: fade-talk .5s linear 1s both;
+    }
+}

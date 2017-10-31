@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+@import './base';
+@import './page1';
+@import './page2';
+@import './page3';
+@import './page4';
+@import './page5';
+@import './page6';
+@import './last_css';
+@import './animation';
+@import './loading';
+
+html{
+    -webkit-tap-highlight-color: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.app{
+    width: 100vw;
+    height: 100vh;
+    overflow-y:hidden; 
+    opacity: 0;
+}
+
+.contain{
+    height: 100vh;
+    width: 100vw;
+    @include bg('page_bg.png');
+    transform: translate3d(0,0,0);
+}
+
+/*音乐转动动画*/
+@keyframes music_animate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.music{
+    position: fixed;
+    left:  .5rem;
+    top: .5rem;
+    @include wh(.45rem,.45rem);
+    border-radius: .25rem;
+    @include bg('music.png');
+    z-index: 100;
+    audio{
+        opacity: 0;
+    }
+}
+
+.music-animation{
+    animation: music_animate 6s linear infinite;
+}
+
+// 页面
+.page {
+    @include wh(100vw, 100vh);
+    @include bg('bg.png', 100%, auto, repeat-y);
+}
+
+// 页面容器
+.page__container {
+    position: relative;
+    @include wh();
+    @include bg('footer.png', 100%, auto);
+    background-position: left bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// 窗口
+.page__window {
+    position: relative;
+    @include wh(6.8rem, 4.58rem);
+    @include bg('window.png');
+
+    .window__content {
+        position: absolute;
+        width: 5rem;
+        height: 3.1rem;
+        left: .86rem;
+        bottom: .66rem;
+        transition: background-color 1s;
+    }
+
+    &.actived .window__content {
+        background-color: #F1F081;
+    }
+}
+
+// 纵列文字
+.page__text {
+    font-size: .32rem;
+    color: #fff;
+    writing-mode: vertical-lr;
+    line-height: 1.7;
+    font-weight: 200;
+    opacity: 0;
+}
+.scroll{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x:hidden; 
+    overflow-y:hidden; 
+}
+
+// 职位卡
+.office-card {
+    $ball-size: .36rem;
+    $triangle-size: .2rem;
+    position: relative;
+    font-size: .32rem;
+    color: #fff;
+    background-color: #161D2E;
+    border-radius: .1rem;
+    margin: .4rem auto;
+    padding: .2rem;
+
+    &::before {
+        content: '';
+        display: block;
+        width: $ball-size;
+        height: $ball-size;
+        position: absolute;
+        top: -1 * $ball-size / 2;
+        right: -1 * $ball-size / 2;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: #F1F081;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -2 * $triangle-size;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: $triangle-size $triangle-size / 2;
+        border-style: solid;
+        border-color: transparent;
+        border-top-color: #161D2E;
+    }
+}
+
+.swiper-slide-active {
+    @keyframes card-animation {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        60% {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+        70% {
+            opacity: 1;
+            transform: scale(1) rotate(-15deg);
+        }
+        80% {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+        90% {
+            opacity: 1;
+            transform: scale(1) rotate(15deg);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+    }
+
+    .office-card {
+        animation: card-animation 1s linear 1s both;
+    }
+}
+
+@keyframes start-flash {
+    from {
+        transform: scale(1);
+        opacity: .3;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+// 星星
+.page_start{
+    @include bg('start.png');
+    position: absolute;
+    height: .23rem;
+    width: .23rem;
+    transition: opacity .3s;
+    z-index: -1;
+}
+
+.page-start-flash {
+    animation: start-flash 1s ease-out infinite alternate;
+}
+
+@keyframes fade-talk {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

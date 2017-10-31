@@ -1,0 +1,12 @@
+@import './base';
+
+.page6 {
+    .page__container {
+        padding-top: .4rem;
+    }
+
+    .window__content {
+        @include bg('page6-technology.png', 4.81rem, 2.27rem);
+        background-position: center bottom;
+    }
+}

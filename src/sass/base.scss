@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/** reset start **/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-y:hidden; 
+}
+
+body {
+    // overflow-y: scroll;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    overflow-x:hidden; 
+    overflow-y:hidden; 
+}
+
+html,
+body,
+div,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/** reset end **/
+
+
+/** 通用mixin类 start **/
+
+// flex布局
+@mixin flex_center($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// 背景
+@mixin bg($img, $sizeX: 100%, $sizeY: 100%, $repeat: no-repeat) {
+    background-image: url('./../images/'+$img);
+    background-repeat: $repeat;
+    background-size: $sizeX $sizeY;
+}
+
+@mixin wh($w: 100%,
+$h: 100%) {
+    width: $w;
+    height: $h;
+}
+
+@mixin position ($p:absolute,
+$l:0,
+$t:0) {
+    position: $p;
+    left: $l;
+    top: $t;
+}
+
+// 遮罩层
+@mixin mask($opacity: .8,$zIndex: 1) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, $opacity);
+    z-index: $zIndex;
+}
+/** 通用mixin类 end **/

@@ -1,0 +1,111 @@
+.twinkle{
+    animation: twinkle 1s linear infinite;
+}
+
+.animation_show{
+    animation: animation_show 1s linear forwards;
+    opacity: 0;
+}
+.animation_hide{
+    animation: animation_hide 1s linear forwards;
+    opacity: 1;
+}
+.animation_rotate{
+    animation: animation_rotate 1s linear forwards;
+    transform: rotate(0deg);
+}
+.animation_left_translate{
+    animation: animation_left_translate 1s linear forwards;
+}
+.animation_left_translate_b{
+    animation: animation_left_translate_b .5s linear forwards;
+}
+.animation_left_translate_br{
+    animation: animation_left_translate_br .5s linear forwards;
+}
+.animation_right_translate{
+    animation: animation_right_translate 1s linear forwards;
+}
+.animation_down_translate{
+    animation: animation_down_translate .3s linear infinite alternate;
+}
+
+@keyframes animation_show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes animation_hide {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes animation_left_translate_b {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes animation_left_translate_br {
+    0%{
+        transform: translateX(100%) rotateY(180deg);
+    }
+    100%{
+        transform: translateX(0) rotateY(180deg);
+    }
+}
+@keyframes animation_left_translate {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+@keyframes animation_right_translate {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(50%);
+    }
+}
+@keyframes animation_down_translate {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(30%);
+    }
+}
+@keyframes animation_rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+.sm_delay{
+    animation-delay: 1s;
+}
+
+.nor_delay{
+    animation-delay: 2s;
+}
+
+.more_delay{
+    animation-delay: 5s;
+}
+
+.more_l_delay{
+    animation-delay: 6s;
+}

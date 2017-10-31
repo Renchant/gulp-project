@@ -1,0 +1,18 @@
+@import './base';
+
+.page1 {
+    @include wh(100vw, 100vh);
+    @include bg('page1-bg.png', 100%, 100%, repeat-y);
+}
+
+.page1__container {
+    position: relative;
+    @include wh();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/page1-header.png'), url('../images/page1-footer.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top left, bottom left;
+}
