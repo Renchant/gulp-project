@@ -286,4 +286,4 @@ window.onload = e => {
     start();
 }
 
-console.log(2)
+console.log(3)
