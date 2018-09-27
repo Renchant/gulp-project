@@ -285,3 +285,5 @@ window.onload = e => {
     create_arrow();
     start();
 }
+
+console.log(1)
